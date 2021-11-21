@@ -1,6 +1,18 @@
 version: "3.4"
 
 services:
+  frontend:
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+      args:
+        REACT_APP_API_URL: ${API_URL}
+    image: frontend
+    volumes:
+      - ./frontend/src:/app/src
+    ports:
+      - "3003:3000"
+      
   backend:
     build:
       context: .
