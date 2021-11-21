@@ -15,7 +15,7 @@ RUN set -ex \
     && pip install -U pip \
     && pip install --no-cache-dir -r /requirements.txt
 
-COPY ./app /app
+COPY ./backend /app
 RUN mkdir -p /app/media/
 RUN touch /app/media/test.jpg
 RUN chmod 777 -R /app/media/
