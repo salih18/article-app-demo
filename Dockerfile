@@ -27,4 +27,4 @@ RUN python manage.py collectstatic --noinput
 
 
 RUN useradd -m -s /bin/bash -G sudo user
-USER user
+# USER user
