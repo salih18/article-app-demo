@@ -9,7 +9,7 @@ import {
   NavLink,
 } from "reactstrap";
 
-import "./Navbar.css";
+import "./Navbar.scss";
 
 const NavbarComponent = () => {
   const [collapsed, setCollapsed] = useState(true);

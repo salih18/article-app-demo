@@ -9,6 +9,7 @@ import store from "./redux/store";
 import { loadUser } from "./redux/actions/auth";
 
 import Navbar from "./layouts/Navbar";
+import Login from "./../src/pages/Login"
 
 import "./App.css";
 
@@ -33,8 +34,10 @@ const App = () => {
           draggable
         />
         <Navbar />
+        <Login />
         <Routes>
-          <Route exact path="/" component={<div>Test</div>} />
+          {/* <Route exact path="/" component={<div>Test</div>} /> */}
+          {/* <Route exact path="/login" component={Login} /> */}
           {/* <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
           <PrivateRoute exact path="/dashboard" component={Dashboard} />
