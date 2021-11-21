@@ -1,0 +1,36 @@
+version: "3.4"
+
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/app
+      - media_volume_local:/app/media
+    command: >
+      sh -c "python manage.py wait_for_db &&
+             python manage.py migrate && 
+             python manage.py runserver 0.0.0.0:8000"
+    env_file:
+      - ./env/postgres.env
+    depends_on:
+      - db
+
+  db:
+    ports:
+      - "5431:5432"    
+    image: postgres:10.5
+    env_file:
+      - ./env/postgres.env
+    volumes:
+      - db_test:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready"]
+      timeout: 10s
+      retries: 3
+
+volumes:
+  db_test:
+  media_volume_local:
