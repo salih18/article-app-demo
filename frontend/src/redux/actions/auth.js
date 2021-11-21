@@ -25,7 +25,7 @@ export const loadUser = () => async dispatch => {
     dispatch({
       type: GET_USER_INFO
     })
-    const res = await axios.get(`${API_URL}/users/me`)
+    const res = await axios.get(`${API_URL}/api/user/me/`)
 
     dispatch({
       type: GET_USER_INFO_SUCCESS,
@@ -46,7 +46,7 @@ export const login = data => async dispatch => {
     dispatch({
       type: LOGIN_USER
     })
-    const res = await axios.post(`${API_URL}/users/login`, data)
+    const res = await axios.post(`${API_URL}/api/user/token/`, data)
     localStorage.setItem('token', res.data.token)
     await dispatch(loadUser())
     dispatch({
