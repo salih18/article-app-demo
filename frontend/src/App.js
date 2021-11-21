@@ -8,6 +8,8 @@ import { Provider } from "react-redux";
 import store from "./redux/store";
 import { loadUser } from "./redux/actions/auth";
 
+import Navbar from "./layouts/Navbar";
+
 import "./App.css";
 
 const App = () => {
@@ -30,7 +32,7 @@ const App = () => {
           pauseOnFocusLoss
           draggable
         />
-        {/* <Navbar /> */}
+        <Navbar />
         <Routes>
           <Route exact path="/" component={<div>Test</div>} />
           {/* <Route exact path="/login" component={Login} />
