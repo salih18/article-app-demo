@@ -26,10 +26,6 @@ services:
       - ./env/postgres.env
     volumes:
       - db_test:/var/lib/postgresql/data
-    healthcheck:
-      test: ["CMD", "pg_isready"]
-      timeout: 10s
-      retries: 3
 
 volumes:
   db_test:
