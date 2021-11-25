@@ -9,7 +9,7 @@ def explantion_images(instance, filename):
 # Create your models here.
 class Article(models.Model):
     title = models.CharField(max_length=50)
-    text = models.CharField(max_length=500)
+    text = models.TextField(max_length=10000)
     active = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)
     update = models.DateTimeField(auto_now=True)
