@@ -9,7 +9,10 @@ import store from "./redux/store";
 import { loadUser } from "./redux/actions/auth";
 
 import Navbar from "./layouts/Navbar";
-import Login from "./../src/pages/Login"
+import Login from "./../src/pages/Login";
+import Home from "./../src/pages/Home";
+import ArticleDetail from "./../src/pages/ArticleDetail";
+import Article from "./../src/pages/Article";
 
 import "./App.css";
 
@@ -34,10 +37,12 @@ const App = () => {
           draggable
         />
         <Navbar />
-        <Login />
         <Routes>
-          {/* <Route exact path="/" component={<div>Test</div>} /> */}
-          {/* <Route exact path="/login" component={Login} /> */}
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/article/:id" element={<ArticleDetail />} />
+          <Route exact path="/article/:id/edit" element={<Article />} />
+          <Route exact path="/article/create" element={<Article />} />
           {/* <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
           <PrivateRoute exact path="/dashboard" component={Dashboard} />

@@ -1,0 +1,22 @@
+.article-edit.card {
+  max-width: fit-content;
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  border: none;
+  margin: 0 2rem;
+  padding: 2rem 3rem;
+  box-shadow: 0 4px 24px 0 rgb(34 41 47 / 10%);
+  background-color: #fff;
+  background-clip: border-box;
+  border-radius: 0.428rem;
+
+  .blog-edit-wrapper .border {
+    border-color: #d8d6de !important;
+  }
+}
+
+.custom-file {
+  .custom-file-label {
+    display: flex;
+  }
+}
