@@ -29,7 +29,7 @@ export const loadUser = () => async (dispatch) => {
 
     dispatch({
       type: GET_USER_INFO_SUCCESS,
-      payload: res.data.current_user,
+      payload: res.data,
     });
   } catch (err) {
     dispatch({
@@ -41,14 +41,12 @@ export const loadUser = () => async (dispatch) => {
 
 // Login User
 export const login = (data) => async (dispatch) => {
-  console.log("🚀 ~ file: auth.js ~ line 44 ~ login ~ data", data);
   try {
     dispatch({
       type: LOGIN_USER,
     });
 
     const res = await axios.post(`${API_URL}/api/user/token/`, data);
-    console.log("🚀 ~ file: auth.js ~ line 50 ~ res", res);
     localStorage.setItem("token", res.data.token);
     await dispatch(loadUser());
     dispatch({

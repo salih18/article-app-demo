@@ -33,7 +33,11 @@ const Article = ({ item, multiple }) => {
               {multiple ? item.text.slice(0, 300) + " ..." : item.text}
             </p>
           </section>
-          <Link className='float-right mb-3' to={`/article/${item.id}`}>Read more...</Link>
+          {multiple && (
+            <Link className="float-right mb-3" to={`/article/${item.id}`}>
+              Read more...
+            </Link>
+          )}
         </div>
       </div>
     </article>

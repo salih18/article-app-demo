@@ -27,10 +27,7 @@ export const getArticleList = () => async (dispatch) => {
       type: GET_ARTICLES,
     });
     const res = await axios.get(`${API_URL}/api/article/`);
-    console.log(
-      "🚀 ~ file: article.js ~ line 30 ~ getArticleList ~ res",
-      res.data
-    );
+
     dispatch({
       type: GET_ARTICLES_SUCCESS,
       payload: res.data,
