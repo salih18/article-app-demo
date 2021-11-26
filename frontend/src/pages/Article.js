@@ -98,14 +98,20 @@ const Article = () => {
             <CardBody>
               <Media>
                 <Media body>
-                  <h6 className="mb-5">Editing</h6>
+                  <h3 className="mb-5 text-secondary">
+                    {isNewArticle
+                      ? "Create an Article"
+                      : "You are editing the article"}
+                  </h3>
                 </Media>
               </Media>
               <Form className="mt-2" onSubmit={handleSubmit}>
                 <Row>
                   <Col md="12">
                     <FormGroup className="mb-2">
-                      <Label for="blog-edit-title">Title</Label>
+                      <Label for="blog-edit-title" className="text-secondary">
+                        Title
+                      </Label>
                       <Input
                         id="blog-edit-title"
                         type="textarea"
@@ -119,7 +125,9 @@ const Article = () => {
 
                   <Col md="12">
                     <FormGroup className="mb-2">
-                      <Label for="blog-edit-slug">Text</Label>
+                      <Label for="blog-edit-slug" className="text-secondary">
+                        Text
+                      </Label>
                       <Input
                         style={{ height: "16rem" }}
                         type="textarea"
@@ -133,7 +141,7 @@ const Article = () => {
 
                   <Col className="mb-2" sm="12">
                     <div className="border rounded p-2">
-                      <h4 className="mb-1 d-flex">Hero Image</h4>
+                      <h4 className="mb-1 d-flex text-secondary">Hero Image</h4>
                       <Media className="flex-column flex-md-row">
                         <img
                           className="rounded mr-2 mb-1 mb-md-0"

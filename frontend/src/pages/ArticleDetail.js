@@ -5,7 +5,7 @@ import Article from "./../components/Article";
 import { useArticle, useAuth } from "./../redux/hooks";
 
 const ArticleDetail = () => {
-  const { detail, getArticleDetail } = useArticle();
+  const { detail, getArticleDetail, deleteArticle } = useArticle();
   const { isAuthenticated } = useAuth();
   const { id } = useParams();
   const navigate = useNavigate();
@@ -14,8 +14,9 @@ const ArticleDetail = () => {
     getArticleDetail(id);
   }, [getArticleDetail, id]);
 
-  const handleDelete = () => {
-    console.log("deleted");
+  const handleDelete = async (id) => {
+    await deleteArticle(id);
+    navigate("/");
   };
 
   return (
@@ -34,16 +35,13 @@ const ArticleDetail = () => {
             >
               Edit
             </Button>
-            <Button onClick={handleDelete} size="sm" block color="danger">
-              Delete
-            </Button>
             <Button
-              onClick={() => navigate("/article/create/")}
+              onClick={() => handleDelete(id)}
               size="sm"
               block
-              color="success"
+              color="danger"
             >
-              Create
+              Delete
             </Button>
           </Col>
         )}

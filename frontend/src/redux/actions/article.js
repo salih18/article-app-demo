@@ -104,7 +104,7 @@ export const createArticle = (formData) => async (dispatch) => {
   }
 };
 
-export const deleteArticle = (id) => async (dispatch, getState) => {
+export const deleteArticle = (id) => async (dispatch) => {
   try {
     dispatch({
       type: DELETE_ARTICLE,
