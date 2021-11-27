@@ -42,11 +42,7 @@ const Login = () => {
       <div className="auth-inner py-2">
         <Card className="mb-0">
           <CardBody>
-            <Link
-              className="brand-logo"
-              to="/"
-              onClick={(e) => e.preventDefault()}
-            >
+            <Link className="brand-logo" to="/">
               <h2 className="brand-text text-primary ml-1">S-Magazine</h2>
             </Link>
             <CardTitle tag="h4" className="mb-1">

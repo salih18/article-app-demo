@@ -1,8 +1,7 @@
 .auth-wrapper {
   display: flex;
   flex-basis: 100%;
-  min-height: 100vh;
-  min-height: calc(var(--vh, 1vh) * 100);
+  min-height: 80vh;
   width: 100%;
 
   .auth-inner {
