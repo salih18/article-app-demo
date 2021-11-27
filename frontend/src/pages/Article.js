@@ -25,6 +25,7 @@ import EmptyFile from "./../assets/empty-file.png";
 
 import "./Article.scss";
 
+
 const Article = () => {
   const { id } = useParams();
   const navigate = useNavigate();

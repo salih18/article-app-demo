@@ -18,7 +18,7 @@ RUN set -ex \
 COPY . /app
 RUN mkdir -p /app/media/
 RUN touch /app/media/test.jpg
-RUN chmod 777 -R /app/media/*
+RUN chmod 777 -R /app/media/
 WORKDIR /app
 RUN python manage.py collectstatic --noinput
 EXPOSE 8000

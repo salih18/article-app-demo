@@ -4,6 +4,8 @@ from django.utils.translation import ugettext_lazy as _
 from core.models import User
 
 def explantion_images(instance, filename):
+    print('---------------------------------------')
+    print("🚀 ~ file: models.py ~ line 7 ~ instance", instance)
     return '{0}/{1}'.format('article_', filename)
 
 # Create your models here.

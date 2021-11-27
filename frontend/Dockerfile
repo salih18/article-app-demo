@@ -15,6 +15,8 @@ RUN npm install react-scripts@3.4.1 -g --silent
 
 ARG REACT_APP_API_URL
 ENV REACT_APP_API_URL http://localhost:8000
+ARG REACT_APP_IMAGE_URL
+ENV REACT_APP_IMAGE_URL http://localhost:8000/media
 
 # add app
 COPY . ./
