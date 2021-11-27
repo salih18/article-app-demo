@@ -21,7 +21,7 @@ const LOGIN_INITIAL_DATA = {
   password: "",
 };
 const Login = () => {
-  const { loginUser, isAuthenticated, user } = useAuth();
+  const { loginUser, isAuthenticated } = useAuth();
 
   const [formData, setFormData] = useState(LOGIN_INITIAL_DATA);
   const { email, password } = formData;

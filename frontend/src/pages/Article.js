@@ -8,7 +8,6 @@ import {
   Col,
   Card,
   CardBody,
-  CardText,
   Media,
   Form,
   Label,

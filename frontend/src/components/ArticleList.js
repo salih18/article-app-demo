@@ -2,8 +2,6 @@ import React, { useEffect } from "react";
 import Article from "./Article";
 import { useNavigate } from "react-router-dom";
 
-import { Link } from "react-router-dom";
-
 import { Row, Col, Container, Button } from "reactstrap";
 
 import "./ArticleList.scss";

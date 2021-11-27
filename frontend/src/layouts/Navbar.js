@@ -15,7 +15,7 @@ import { useAuth } from "./../redux/hooks";
 import "./Navbar.scss";
 
 const NavbarComponent = () => {
-  const { loadUser, user, loading, logoutUser, isAuthenticated } = useAuth();
+  const { loadUser, user, logoutUser, isAuthenticated } = useAuth();
   const navigate = useNavigate();
 
   useEffect(() => {
