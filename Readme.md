@@ -1,6 +1,6 @@
 # Article Fullstack Demo Web Application
 
-#####React | React Hooks | React Redux | Django Rest | Postgres 
+##### React | React Hooks | React Redux | Django Rest | Postgres 
 
 ### Desktop View
 
