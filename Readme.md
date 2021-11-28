@@ -43,8 +43,6 @@ password: test123456
 
 - React | React Hooks | React Redux
 
-- Typescript
-
 - Django Rest Api - DRF
 
 - Reactstrap
